@@ -13,3 +13,6 @@ class Course(Base):
     credit_hours: Mapped[int] = mapped_column(Integer(2), nullable=False)
 
     enrollments: Mapped[list['Enrollment']] = relationship('Enrollment', back_populates='course')
+
+    def __repr__(self):
+        return f'<Course(id={self.id}, code={self.code}, name={self.name}, credit_hours={self.credit_hours})>'

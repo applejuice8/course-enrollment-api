@@ -12,3 +12,6 @@ class Student(Base):
     age: Mapped[int] = mapped_column(Integer(3), nullable=False)
 
     enrollments: Mapped[list['Enrollment']] = relationship('Enrollment', back_populates='student')
+
+    def __repr__(self):
+        return f'<Student(id={self.id}, name={self.name}, age={self.age})>'

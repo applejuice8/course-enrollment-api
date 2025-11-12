@@ -16,3 +16,6 @@ class Enrollment(Base):
 
     student: Mapped[Student] = relationship('Student', back_populates='enrollments')
     course: Mapped[Course] = relationship('Course', back_populates='enrollments')
+
+    def __repr__(self):
+        return f'<Enrollment(id={self.id}, date={self.date}, student_id={self.student_id}, course_id={self.course_id})>'
