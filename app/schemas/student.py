@@ -15,3 +15,4 @@ class StudentRead(BaseModel):
 class StudentUpdate(BaseModel):
     name: str | None = None
     age: int | None
+    password: str | None = None
