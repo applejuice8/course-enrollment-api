@@ -38,3 +38,10 @@ def update_student(db: Session, student_id: int, student: StudentUpdate):
     db.commit()
     db.refresh(db_student)
     return db_student
+
+def delete_student(db: Session, student_id: int):
+    db_student = db.query(Student).filter_by(id=student_id).first()
+    if not db_student:
+        raise HTTPException(status_code=404, detail='Student not found')
+    db.delete(db_student)
+    db.commit()

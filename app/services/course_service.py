@@ -37,3 +37,10 @@ def update_course(db: Session, course_id: int, course: CourseUpdate):
     db.commit()
     db.refresh(db_course)
     return db_course
+
+def delete_course(db: Session, course_id: int):
+    db_course = db.query(Course).filter_by(id=course_id).first()
+    if not db_course:
+        raise HTTPException(status_code=404, detail='Course not found')
+    db.delete(db_course)
+    db.commit()
