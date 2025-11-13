@@ -7,7 +7,7 @@ class Student(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(50), nullable=False)
-    age: Mapped[int] = mapped_column(Integer(3), nullable=False)
+    age: Mapped[int] = mapped_column(Integer, nullable=False)
     password: Mapped[str] = mapped_column(String(128), nullable=False)
 
     enrollments: Mapped[list[int]] = relationship('Enrollment', back_populates='student')

@@ -8,7 +8,7 @@ class Course(Base):
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     code: Mapped[str] = mapped_column(String(10), unique=True, nullable=False)
     name: Mapped[str] = mapped_column(String(50), nullable=False)
-    credit_hours: Mapped[int] = mapped_column(Integer(2), nullable=False)
+    credit_hours: Mapped[int] = mapped_column(Integer, nullable=False)
 
     enrollments: Mapped[list[int]] = relationship('Enrollment', back_populates='course')
 
