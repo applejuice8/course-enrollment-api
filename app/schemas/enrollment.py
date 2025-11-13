@@ -6,7 +6,7 @@ class EnrollmentCreate(BaseModel):
     student_id: int
     course_id: int
 
-class EnrollmentRead(BaseModel):
+class EnrollmentGet(BaseModel):
     student_id: int
     course_id: int
     date: datetime

@@ -5,7 +5,7 @@ class StudentCreate(BaseModel):
     age: int
     password: str
 
-class StudentRead(BaseModel):
+class StudentGet(BaseModel):
     id: int
     name: str
     age: int

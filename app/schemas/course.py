@@ -5,7 +5,7 @@ class CourseCreate(BaseModel):
     name: str
     credit_hours: int
 
-class CourseRead(BaseModel):
+class CourseGet(BaseModel):
     id: int
     code: str
     name: str
