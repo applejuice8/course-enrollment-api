@@ -5,6 +5,11 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+echo "Executing 'git add .'"
 git add .
+
+echo "Executing 'git commit -m \"$1\"'"
 git commit -m "$1"
+
+echo "Executing 'git push'"
 git push
