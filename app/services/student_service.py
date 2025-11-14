@@ -1,6 +1,6 @@
 from http.client import HTTPException
 from sqlalchemy.orm import Session
-from app.core.security import hash_pw, verify_pw
+from app.core.security import hash_pw
 from app.models.student import Student
 from app.schemas.student import StudentCreate, StudentUpdate
 
