@@ -4,8 +4,6 @@ green=$(tput setaf 2)   # Green
 red=$(tput setaf 1)     # Red
 reset=$(tput sgr0)
 
-echo "${green}Executing 'git commit -m \"$msg\"'${reset}"
-
 msg="$*"
 
 if [ -z "$msg" ]; then
