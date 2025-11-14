@@ -1,4 +1,4 @@
-.DB_STORE
+.DS_STORE
 .env
 venv/
 __pycache__/
