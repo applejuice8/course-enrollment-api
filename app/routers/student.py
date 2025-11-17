@@ -9,7 +9,7 @@ router = APIRouter(prefix='/students', tags=['students'])
 # Custom validation
 def validate_student_id(
     student_id: int = Path(..., gt=0, description='Student ID must be positive')
-):
+) -> int:
     return student_id
 
 # Create

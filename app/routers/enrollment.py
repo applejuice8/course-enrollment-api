@@ -9,7 +9,7 @@ router = APIRouter(prefix='/enrollments', tags=['enrollments'])
 # Custom validation
 def validate_enrollment_id(
     enrollment_id: int = Path(..., gt=0, description='Enrollment ID must be positive')
-):
+) -> int:
     return enrollment_id
 
 # Create
