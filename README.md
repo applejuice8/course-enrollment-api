@@ -3,7 +3,6 @@
 ## Run the Code
 
 ```bash
-cd Course_Enrollment
 uvicorn app.main:app --reload
 ```
 
