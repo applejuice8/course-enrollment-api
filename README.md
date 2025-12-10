@@ -1,5 +1,7 @@
 # Course Enrollment
 
+A RESTful API built using Python, FastAPI, SQLAlchemy and SQLite to allow students to enroll in different courses.
+
 ## Run the Code
 
 ```bash
