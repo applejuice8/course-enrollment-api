@@ -2,6 +2,8 @@
 
 A RESTful API built using Python, FastAPI, SQLAlchemy and SQLite to allow students to enroll in different courses.
 
+![Screenshot](screenshot.png)
+
 ## Run the Code
 
 ```bash
